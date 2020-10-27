@@ -8,7 +8,8 @@ os:
 before-install:
   - wget https://github.com/forax/java-next/releases/download/untagged-4890d0aa579cf85dd353/jdk-16-loom-linux.tar.gz
   - tar xzvf jdk-16-loom-linux.tar.gz
-  - export JAVA_HOME=jdk-16-loom-linux/bin
+  - ls -R
+  - export JAVA_HOME=jdk-16-loom-linux/
 
 script:
   - mvn package
