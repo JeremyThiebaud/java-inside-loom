@@ -39,7 +39,7 @@ public class Scheduler {
             if(cont.isDone()){
                 list.remove(cont);
             } else {
-                cont.run();
+                cont.run( );
             }
         }
     }
