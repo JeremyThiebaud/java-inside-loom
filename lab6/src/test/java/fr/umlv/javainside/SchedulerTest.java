@@ -29,7 +29,7 @@ class SchedulerTest {
         var list = List.of(continuation1, continuation2);
         list.forEach(Continuation::run);
         scheduler.runLoop();
-        assertEquals("start 1\nstart 2\nmiddle 2\nend 2\nmiddle 1\nend 1\n", str.toString());
+        assertEquals("start 1\nstart 2\nmiddle 1\nmiddle 2\nend 1\nend 2\n", str.toString());
     }
 
     @Test
@@ -54,7 +54,7 @@ class SchedulerTest {
         var list = List.of(continuation1, continuation2);
         list.forEach(Continuation::run);
         scheduler.runLoop();
-        assertEquals("start 1\nstart 2\nmiddle 1\nend 1\nmiddle 2\nend 2\n", str.toString());
+        assertEquals("start 1\nstart 2\nmiddle 2\nend 2\nmiddle 1\nend 1\n", str.toString());
     }
 
     @Test
